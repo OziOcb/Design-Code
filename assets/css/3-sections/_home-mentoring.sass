@@ -5,6 +5,7 @@ section.mentoring
     position: center
     color: #4fa3bc
   color: white
+  overflow: hidden
 
   .home-cta
     color: #4fa3bc
@@ -17,6 +18,12 @@ section.mentoring
     margin: -50px 0
     height: calc(100% + 100px)
     padding: 0
+    position: relative
+    top: 800px
+    transition: all 0.3s ease-in-out
+
+    &.launched
+      top: 0
 
   .face
     height: 80px
@@ -28,6 +35,7 @@ section.mentoring
     margin-bottom: 35px
     box-shadow: 0px 4px 8px rgba(0,0,0,0.4)
     position: relative
+    cursor: pointer
 
   .bubble
     // display: none
@@ -46,7 +54,7 @@ section.mentoring
     transform: scale(0)
     transform-origin: bottom left
 
-  .face:hover .bubble
+  .face.has-bubble-open .bubble
     // display: block
     opacity: 1
     transform: scale(1)

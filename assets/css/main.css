@@ -729,7 +729,8 @@ section.mentoring {
   background-size: cover;
   background-position: center;
   background-color: #4fa3bc;
-  color: white; }
+  color: white;
+  overflow: hidden; }
   section.mentoring .home-cta {
     color: #4fa3bc; }
   section.mentoring .home-lead {
@@ -738,7 +739,12 @@ section.mentoring {
     list-style: none;
     margin: -50px 0;
     height: calc(100% + 100px);
-    padding: 0; }
+    padding: 0;
+    position: relative;
+    top: 800px;
+    transition: all 0.3s ease-in-out; }
+    section.mentoring .faces.launched {
+      top: 0; }
   section.mentoring .face {
     height: 80px;
     width: 80px;
@@ -747,7 +753,8 @@ section.mentoring {
     border-radius: 50%;
     margin-bottom: 35px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
-    position: relative; }
+    position: relative;
+    cursor: pointer; }
   section.mentoring .bubble {
     opacity: 0;
     position: absolute;
@@ -765,7 +772,7 @@ section.mentoring {
             transform: scale(0);
     -webkit-transform-origin: bottom left;
             transform-origin: bottom left; }
-  section.mentoring .face:hover .bubble {
+  section.mentoring .face.has-bubble-open .bubble {
     opacity: 1;
     -webkit-transform: scale(1);
             transform: scale(1); }
